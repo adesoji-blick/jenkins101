@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        choice (choices: "production\ndevelopment\ntest", description: "simple test", name: "email_dir")
+    }
+
     stages {
         stage ('List repo content') {
             steps {
