@@ -2,6 +2,8 @@ pipeline {
     agent any
 
     parameters {
+        string (defaultValue: "20", description: "timeout", name: "timeout")
+        booleanParam (defaultValue: false, description : "cleanup",  name: "cleanup_dir")
         choice (choices: "production\ndevelopment\ntest", description: "simple test", name: "email_dir")
     }
 
