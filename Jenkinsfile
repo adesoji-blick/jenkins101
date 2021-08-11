@@ -3,6 +3,9 @@ pipeline {
 
     stages {
         stage ('List repo content') {
+            when {
+                branch "master"
+            }
             steps {
                sh "ls -ltr"
             }
