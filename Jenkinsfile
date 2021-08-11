@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage ('hello world') {
+        stage ('List repo content') {
             steps {
-                echo "hello world"
+               sh "ls -ltr"
             }
         }
     }
