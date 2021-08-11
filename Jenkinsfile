@@ -15,7 +15,7 @@ pipeline {
 
         stage ('copy file from downloaded repo to dest') {
             steps {
-               sh "cp gmails.txt  /tmp/emails/others"
+               sh "cp gmail.txt  /tmp/emails/others"
             }
         }
     }
